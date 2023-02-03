@@ -11,6 +11,7 @@ export default function TravelTypes() {
       mt={['10', '32']}
       mx="auto"
       maxW="1160px"
+      px={['4', '10', '15']}
       flexWrap="wrap"
       gap={[1, 5]}
     >
