@@ -1,3 +1,4 @@
+import Banner from '@/components/Banner'
 import { Header } from '@/components/Header'
 import { Flex } from '@chakra-ui/react'
 import Head from 'next/head'
@@ -10,6 +11,7 @@ export default function Home() {
       </Head>
       <Flex direction="column">
         <Header />
+        <Banner />
       </Flex>
     </>
   )
