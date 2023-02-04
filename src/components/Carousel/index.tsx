@@ -1,4 +1,5 @@
 import { Flex, Heading, Text } from '@chakra-ui/react'
+import Link from 'next/link'
 import SwiperCore, { A11y, Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -8,6 +9,7 @@ type CaroulselItemProps = {
   image: string
   title: string
   description: string
+  slug: string
 }
 
 type CarouselProps = {
@@ -42,21 +44,25 @@ export function Carousel({ data }: CarouselProps) {
               bgRepeat="no-repeat"
               bgSize="cover"
             >
-              <Heading
-                fontSize={['3xl', '4xl', '5xl']}
-                color="gray.100"
-                fontWeight="bold"
-              >
-                {item.title}
-              </Heading>
-              <Text
-                fontWeight="bold"
-                color="gray.300"
-                fontSize={['0.8rem', '1xl', '2xl']}
-                mt={['2', '4']}
-              >
-                {item.description}
-              </Text>
+              <Link href={`/continent/${item.slug}`}>
+                <Heading
+                  fontSize={['3xl', '4xl', '5xl']}
+                  color="gray.100"
+                  fontWeight="bold"
+                  textAlign="center"
+                >
+                  {item.title}
+                </Heading>
+                <Text
+                  fontWeight="bold"
+                  color="gray.300"
+                  fontSize={['0.8rem', '1xl', '2xl']}
+                  mt={['2', '4']}
+                  textAlign="center"
+                >
+                  {item.description}
+                </Text>
+              </Link>
             </Flex>
           </SwiperSlide>
         ))}
