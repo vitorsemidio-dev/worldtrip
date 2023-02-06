@@ -1,3 +1,18 @@
+import {
+  cities100Africa,
+  cities100America,
+  cities100Asia,
+  cities100Australia,
+  cities100Europa,
+} from './cities100'
+
+type City = {
+  name: string
+  image: string
+  countryName: string
+  countryFlag: string
+}
+
 type Continent = {
   image: string
   title: string
@@ -7,6 +22,7 @@ type Continent = {
   countries: number
   cities: number
   languages: number
+  cities100: City[]
 }
 
 export const continents: Continent[] = [
@@ -19,6 +35,7 @@ export const continents: Continent[] = [
     countries: 55,
     cities: 5,
     languages: 7,
+    cities100: cities100Africa,
   },
   {
     image: '/america.jpg',
@@ -29,6 +46,7 @@ export const continents: Continent[] = [
     countries: 35,
     cities: 25,
     languages: 4,
+    cities100: cities100America,
   },
   {
     image: '/asia.jpg',
@@ -39,6 +57,7 @@ export const continents: Continent[] = [
     countries: 48,
     cities: 35,
     languages: 10,
+    cities100: cities100Asia,
   },
   {
     image: '/australia.jpg',
@@ -49,6 +68,7 @@ export const continents: Continent[] = [
     countries: 14,
     cities: 5,
     languages: 1,
+    cities100: cities100Australia,
   },
   {
     image: '/europe.jpg',
@@ -59,5 +79,6 @@ export const continents: Continent[] = [
     countries: 44,
     cities: 30,
     languages: 24,
+    cities100: cities100Europa,
   },
 ]
